@@ -10,7 +10,7 @@ class NinjaAPI:
         self.headers = {"X-Api-Key": api_key}
         self.session = session
 
-    def fact(self, num):
+    def fact(self, num=1):
         r = requests.get(self.base_url + f"facts?limit={num}", headers=self.headers)
         list_facts = r.json()
         out = []
